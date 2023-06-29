@@ -435,13 +435,13 @@
             autocomplete="on"
             novalidate
           >
-            <label for="email"></label>
-            <input
-              class="form-field"
-              type="email"
-              name="email"
-              placeholder="Email"
-            />
+            <label for="email">
+              <input
+                class="form-field"
+                type="email"
+                name="email"
+                placeholder="Email"
+            /></label>
 
             <button class="submit-btn" type="submit">
               Subscribe<svg class="iconsend">
@@ -470,88 +470,98 @@
             <use href="./images/icons.svg#close-black"></use>
           </svg>
         </button>
-        <div class="modal-form-container">
-          <p class="modal-form-title">
-            Leave your contacts and we will call you back
-          </p>
-
-          <form class="modal-form">
-            <ul class="form-list">
-              <li class="form-item">
-                <label for="name">Name</label>
-                <input
-                  class="modal-form-field"
-                  type="text"
-                  name="name"
-                  id="name"
-                  autofocus
-                />
-                <svg
-                  class="input-icon-name"
-                  id="icon-person"
-                  width="18"
-                  height="18"
-                ></svg>
-              </li>
-              <li class="form-item">
-                <label for="phone">Phone</label>
-                <input
-                  class="modal-form-field"
-                  type="phone"
-                  name="phone"
-                  id="phone"
-                />
-                <svg
-                  class="input-icon-tel"
-                  id="icon-phone"
-                  width="18"
-                  height="18"
-                ></svg>
-              </li>
-              <li class="form-item">
-                <label for="email">Email</label>
-                <input
-                  class="modal-form-field"
-                  type="email"
-                  name="email"
-                  id="email"
-                  id="myInput"
-                />
-                <svg
-                  class="input-icon-email"
-                  id="mySVG"
-                  id="icon-email"
-                  width="18"
-                  height="18"
-                ></svg>
-              </li>
-              <li class="form-item">
-                <label for="comment">Comment</label>
-                <textarea
-                  name="comment"
-                  id="comment"
-                  cols="10"
-                  rows="10"
-                ></textarea>
-              </li>
-            </ul>
-            <div class="checkbox-container">
-              <input type="checkbox" name="checkbox" id="checkbox" checked />
-              <label for="checkbox" class="checkbox-label"
-                >I accept the terms and conditions of the
-                <a href="" class="privacy-link">Privacy Policy</a>
-              </label>
+        <p class="modal-form-title">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form">
+          <div class="modal-form-container">
+            <label class="modal-form-label" for="name">Name</label>
+            <div class="input-container">
+              <input
+                class="modal-input"
+                type="text"
+                name="name"
+                id="name"
+                autofocus
+              />
+              <svg
+                class="input-icon-name input-icon"
+                id="icon-person"
+                width="18"
+                height="18"
+              ></svg>
             </div>
+          </div>
+          <div class="modal-form-container">
+            <label class="modal-form-label" for="phone">Phone</label>
+            <div class="input-container">
+              <input class="modal-input" type="phone" name="phone" id="phone" />
+              <svg
+                class="input-icon-tel input-icon"
+                id="icon-phone"
+                width="18"
+                height="18"
+              ></svg>
+            </div>
+          </div>
+          <div class="modal-form-container">
+            <label class="modal-form-label" for="email">Email</label>
+            <div class="input-container">
+              <input
+                class="modal-input"
+                type="email"
+                name="email"
+                id="email"
+                id="myInput"
+              />
+              <svg
+                class="input-icon-email input-icon"
+                id="mySVG"
+                id="icon-email"
+                width="18"
+                height="18"
+              ></svg>
+            </div>
+          </div>
+          <div class="modal-textarea-container">
+            <label for="comment">Comment</label>
+            <textarea
+              class="modal-textarea"
+              name="comment"
+              id="comment"
+              cols="10"
+              rows="10"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="checkbox-container">
+            <input
+              class="checkbox-input visually-hidden"
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+              checked
+            />
+            <label for="user-privacy" class="checkbox-label"
+              >I accept the terms and conditions of the
+              <span class="checkbox-span">
+                <svg class="click-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-click"></use>
+                </svg>
+              </span>
+              <a href="" class="privacy-link">Privacy Policy</a>
+            </label>
+          </div>
 
-            <button class="modal-submit-btn" type="submit">Send</button>
-          </form>
-        </div>
+          <button class="modal-submit-btn" type="submit">Send</button>
+        </form>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
 
-    <script>
+    <!-- <script>
       const myInput = document.getElementById("myInput");
       const mySVG = document.getElementById("mySVG");
 
@@ -562,6 +572,6 @@
       mySVG.addEventListener("click", () => {
         console.log("SVG clicked");
       });
-    </script>
+    </script> -->
   </body>
 </html>
