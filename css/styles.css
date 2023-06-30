@@ -598,6 +598,9 @@ address .link:hover {
   gap: 24px;
 }
 
+.footer-form-label {
+}
+
 .form-field {
   width: 264px;
   height: 40px;
@@ -620,12 +623,10 @@ address .link:hover {
 .submit-btn {
   display: flex;
   padding: 8px 24px;
-
   align-items: center;
   cursor: pointer;
-  min-width: 165px;
+  max-width: 165px;
   height: 40px;
-  gap: 16px;
 
   border-radius: 4px;
   color: var(--white-background);
@@ -648,8 +649,7 @@ address .link:hover {
 
 .iconsend {
   fill: currentColor;
-  width: 24px;
-  height: 24px;
+  margin-left: 16px;
 }
 
 /* Styles for portfolio.html */
@@ -904,14 +904,14 @@ address .link:hover {
   color: var(--dark);
 }
 
-.modal-form-label,
-.textarea-label {
+.modal-form-label {
   display: inline-block;
   font-size: 12px;
   margin-bottom: 4px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   border-radius: 4px;
+  color: var(--customers-icon);
 }
 
 .input-container {
@@ -958,7 +958,7 @@ address .link:hover {
   resize: none;
   outline: transparent;
   background-color: transparent;
-  color: var(--dark);
+  color: rgba(46, 47, 66, 0.4);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
