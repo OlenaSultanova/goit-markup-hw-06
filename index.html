@@ -475,33 +475,27 @@
         </p>
         <form class="modal-form">
           <div class="modal-form-container">
-            <label class="modal-form-label" for="name">Name</label>
+            <label class="modal-form-label" for="user-name">Name</label>
             <div class="input-container">
               <input
                 class="modal-input"
                 type="text"
-                name="name"
-                id="name"
+                name="user-name"
+                id="user-name"
                 autofocus
               />
-              <svg
-                class="input-icon-name input-icon"
-                id="icon-person"
-                width="18"
-                height="18"
-              ></svg>
+              <svg class="input-icon" id="icon-person" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
             </div>
           </div>
           <div class="modal-form-container">
             <label class="modal-form-label" for="phone">Phone</label>
             <div class="input-container">
               <input class="modal-input" type="phone" name="phone" id="phone" />
-              <svg
-                class="input-icon-tel input-icon"
-                id="icon-phone"
-                width="18"
-                height="18"
-              ></svg>
+              <svg class="input-icon" id="icon-phone" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
             </div>
           </div>
           <div class="modal-form-container">
@@ -515,22 +509,22 @@
                 id="myInput"
               />
               <svg
-                class="input-icon-email input-icon"
+                class="input-icon"
                 id="mySVG"
                 id="icon-email"
                 width="18"
-                height="18"
-              ></svg>
+                height="24"
+              >
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
             </div>
           </div>
           <div class="modal-textarea-container">
-            <label for="comment">Comment</label>
+            <label class="textarea-label" for="user-comment">Comment</label>
             <textarea
               class="modal-textarea"
-              name="comment"
-              id="comment"
-              cols="10"
-              rows="10"
+              name="user-comment"
+              id="user-comment"
               placeholder="Text input"
             ></textarea>
           </div>
@@ -541,15 +535,14 @@
               name="user-privacy"
               id="user-privacy"
               value="true"
-              checked
             />
             <label for="user-privacy" class="checkbox-label"
-              >I accept the terms and conditions of the
-              <span class="checkbox-span">
+              ><span class="checkbox-span">
                 <svg class="click-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-click"></use>
-                </svg>
-              </span>
+                </svg> </span
+              >I accept the terms and conditions of the
+
               <a href="" class="privacy-link">Privacy Policy</a>
             </label>
           </div>
@@ -560,18 +553,5 @@
     </div>
 
     <script src="./js/modal.js"></script>
-
-    <!-- <script>
-      const myInput = document.getElementById("myInput");
-      const mySVG = document.getElementById("mySVG");
-
-      myInput.addEventListener("input", () => {
-        console.log(myInput.value);
-      });
-
-      mySVG.addEventListener("click", () => {
-        console.log("SVG clicked");
-      });
-    </script> -->
   </body>
 </html>

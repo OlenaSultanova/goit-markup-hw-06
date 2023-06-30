@@ -620,10 +620,8 @@ address .link:hover {
 .submit-btn {
   display: flex;
   padding: 8px 24px;
-  margin-left: 24px;
+
   align-items: center;
-  justify-content: center;
-  text-align: center;
   cursor: pointer;
   min-width: 165px;
   height: 40px;
@@ -826,6 +824,7 @@ address .link:hover {
   transform: translate(-50%, -50%);
 
   display: flex;
+  flex-direction: column;
   width: 408px;
   min-height: 584px;
   padding: 72px 24px 24px;
@@ -879,9 +878,8 @@ address .link:hover {
 
 .modal-form-container {
   margin-bottom: 8px;
-
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .modal-textarea-container {
@@ -893,7 +891,7 @@ address .link:hover {
 }
 
 .modal-form-title {
-  max-width: 360px;
+  width: 360px;
   margin-bottom: 16px;
   text-align: center;
   font-size: 16px;
@@ -905,56 +903,14 @@ address .link:hover {
   color: var(--dark);
 }
 
-.checkbox-label {
-  margin-left: 8px;
-  color: var(--customers-icon);
+.modal-form-label,
+.textarea-label {
+  display: inline-block;
   font-size: 12px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-}
-
-.checkbox-input:checked .checkbox-span {
-  background-color: var(--pressed-state);
-  border: none;
-  fill: var(--light);
-}
-
-.checkbox-span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  fill: transparent;
-  transition: background-color 250ms var(--timing-function),
-    border 250ms var(--timing-function), fill 250ms var(--timing-function);
-}
-
-.click-icon {
-}
-
-.privacy-link {
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: var(--primary-brand);
-}
-
-.modal-form-label {
-  display: block;
   margin-bottom: 4px;
-  font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  height: 40px;
   border-radius: 4px;
-  border: 1px solid var(--customers-icon);
 }
 
 .input-container {
@@ -980,10 +936,15 @@ address .link:hover {
 .input-icon {
   position: absolute;
   top: 50%;
-  margin-left: 16px;
+  left: 16px;
+  fill: var(--dark);
   transform: translateY(-50%);
 
   transition: fill 250ms var(--timing-function);
+}
+
+.modal-input:focus .input-icon {
+  fill: var(--primary-brand);
 }
 
 .modal-textarea {
@@ -996,7 +957,7 @@ address .link:hover {
   resize: none;
   outline: transparent;
   background-color: transparent;
-  color: rgba(46, 47, 66, 0.4);
+  color: var(--dark);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
@@ -1007,13 +968,51 @@ address .link:hover {
   border-color: var(--primary-brand);
 }
 
-.input-icon-name {
+::placeholder {
+  color: var(--customers-icon);
 }
 
-.input-icon-phone {
+.checkbox-label {
+  margin-left: 8px;
+  color: var(--customers-icon);
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 
-.input-icon-email {
+.checkbox-input:checked .checkbox-span {
+  background-color: var(--pressed-state);
+  border: none;
+  fill: var(--light);
+}
+
+.checkbox-span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  fill: transparent;
+  transition: background-color 250ms var(--timing-function),
+    border 250ms var(--timing-function), fill 250ms var(--timing-function);
+}
+
+.click-icon {
+  fill: var(--primary-brand);
+}
+
+.privacy-link {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-brand);
 }
 
 .modal-submit-btn {
@@ -1036,7 +1035,8 @@ address .link:hover {
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  transition: fill 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit-btn:hover,
