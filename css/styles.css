@@ -621,8 +621,9 @@ address .link:hover {
   display: flex;
   padding: 8px 24px;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
-  max-width: 165px;
+  min-width: 165px;
   height: 40px;
 
   border-radius: 4px;
@@ -941,7 +942,7 @@ address .link:hover {
   transition: fill 250ms var(--timing-function);
 }
 
-.modal-input:focus .input-icon {
+.modal-input:focus ~ .input-icon {
   fill: var(--primary-brand);
 }
 
@@ -971,7 +972,6 @@ address .link:hover {
 }
 
 .checkbox-label {
-  margin-left: 8px;
   color: var(--customers-icon);
   font-size: 12px;
   font-family: "Roboto", sans-serif;
@@ -980,7 +980,7 @@ address .link:hover {
   letter-spacing: 0.04em;
 }
 
-.checkbox-input:checked .checkbox-span {
+.checkbox-input:checked ~ .checkbox-span {
   background-color: var(--pressed-state);
   border: none;
   fill: var(--light);
@@ -1000,10 +1000,6 @@ address .link:hover {
     border 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
-.click-icon {
-  fill: var(--primary-brand);
-}
-
 .privacy-link {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
@@ -1018,7 +1014,6 @@ address .link:hover {
   min-width: 169px;
   height: 56px;
   padding: 16px 32px;
-
   margin: 0 auto;
 
   color: var(--white-background);
