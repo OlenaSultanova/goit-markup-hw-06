@@ -928,6 +928,7 @@ address .link:hover {
   transition: border-color 250ms var(--timing-function);
 }
 
+.modal-input:hover,
 .modal-input:focus {
   border-color: var(--primary-brand);
 }
@@ -942,6 +943,7 @@ address .link:hover {
   transition: fill 250ms var(--timing-function);
 }
 
+.modal-input:hover~ .input-icon,
 .modal-input:focus ~ .input-icon {
   fill: var(--primary-brand);
 }
@@ -963,6 +965,7 @@ address .link:hover {
   transition: border-color 250ms var(--timing-function);
 }
 
+.modal-textarea:hover,
 .modal-textarea:focus {
   border-color: var(--primary-brand);
 }
