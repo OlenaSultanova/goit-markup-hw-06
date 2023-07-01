@@ -980,13 +980,18 @@ address .link:hover {
   letter-spacing: 0.04em;
 }
 
-.checkbox-input:checked ~ .checkbox-span {
+.checkbox-input:checked ~ label .checkbox-span {
   background-color: var(--pressed-state);
   border: none;
   fill: var(--light);
 }
 
+.checkbox-input:checked ~ label .checkbox-icon {
+  fill: var(--light);
+}
+
 .checkbox-span {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
