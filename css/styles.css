@@ -989,10 +989,6 @@ address .link:hover {
   fill: var(--light);
 }
 
-.checkbox-input:checked + label .checkbox-icon {
-  fill: currentColor;
- 
-}
 
 .checkbox-span {
   cursor: pointer;
