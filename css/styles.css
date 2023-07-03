@@ -943,7 +943,7 @@ address .link:hover {
   transition: fill 250ms var(--timing-function);
 }
 
-.modal-input:hover~ .input-icon,
+.modal-input:hover ~ .input-icon,
 .modal-input:focus ~ .input-icon {
   fill: var(--primary-brand);
 }
@@ -984,16 +984,15 @@ address .link:hover {
 }
 
 .checkbox-input:checked + label .checkbox-span {
-  background-color: var(--light);
+  background-color: var(--pressed-state);
   border: none;
-  fill: var(--pressed-state);
+  fill: var(--light);
 }
 
 .checkbox-input:checked + label .checkbox-icon {
-  fill: var(--pressed-state);
+  fill: currentColor;
  
 }
-
 
 .checkbox-span {
   cursor: pointer;
