@@ -983,15 +983,17 @@ address .link:hover {
   letter-spacing: 0.04em;
 }
 
-.checkbox-input:checked ~ label .checkbox-span {
-  background-color: var(--pressed-state);
+.checkbox-input:checked + label .checkbox-span {
+  background-color: var(--light);
   border: none;
-  fill: var(--light);
+  fill: var(--pressed-state);
 }
 
-.checkbox-input:checked ~ label .checkbox-icon {
-  fill: var(--light);
+.checkbox-input:checked + label .checkbox-icon {
+  fill: var(--pressed-state);
+ 
 }
+
 
 .checkbox-span {
   cursor: pointer;
