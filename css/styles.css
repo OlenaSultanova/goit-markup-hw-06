@@ -162,16 +162,16 @@ img {
   margin-right: 0;
 }
 
-address .link {
+.address-link {
   text-decoration: none;
-  color: var(--text);
+  color: var(--subtle-text);
   line-height: 1.5;
   letter-spacing: 0.02em;
   transition: color 250ms var(--timing-function);
 }
 
-address .link:focus,
-address .link:hover {
+.address-link:focus,
+.address-link:hover {
   color: var(--pressed-state);
 }
 
